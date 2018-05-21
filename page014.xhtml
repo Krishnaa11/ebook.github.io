@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+$(document).ready(function(){
+s();
+
+});
+
+function s(){
+var gun =  document.getElementById('thumb14');
+var water =  document.getElementById('water14');
+gun.style.webkitAnimationName = "thumb_14"; 
+ gun.style.webkitAnimationPlayState = 'running';
+ gun.addEventListener('webkitAnimationEnd',function(e) {
+ water.style.webkitAnimationName = "water14"; 
+ water.style.webkitAnimationPlayState = 'running';
+ });
+ water.addEventListener('webkitAnimationEnd',function(e){
+
+  gun.style.webkitAnimationPlayState = 'paused';
+
+ water.style.webkitAnimationPlayState = 'paused';
+    setTimeout(function(){ second();},7000);
+ });
+}
+function second()
+    {
+   
+    s();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    s();
+
+    }
+</script>
+
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_32" class="img_ibooks" src="../images/page014.png" width="1003" height="1005" alt="image"/></div>
+<div id="water14" style="position: absolute; left: 153px; top: 675px;">
+<img id="img_33" class="img_ibooks" src="../images/Water14.png" width="109" height="83" alt="image"/></div>
+<div id="thumb14" style="position: absolute; left: 299px; top:674px;">
+<img id="img_34" class="img_ibooks" src="../images/thumb_14.png" width="41" height="33" alt="image"/></div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+$(document).ready(function() {
+
+s();
+ });
+ function s(){
+
+$('#arm22_loop').hide();
+$('#arm22').show();
+ var arm =  document.getElementById('arm22');
+  var arm_loop =  document.getElementById('arm22_loop');
+  // arm_loop.style.webkitAnimationPlayState = 'paused';
+  arm.style.webkitAnimationName = 'arm';
+ arm.style.webkitAnimationPlayState = 'running';
+
+
+ arm.addEventListener('webkitAnimationEnd',function(e) {
+ arm.style.webkitAnimationName = 'arm1';
+ arm.style.webkitAnimationPlayState = 'running';
+
+arm.addEventListener('webkitAnimationEnd',function(e) {
+ setTimeout(function(){ second();},3000);
+
+
+ });
+});
+var boo =  document.getElementById('lines22');
+boo.style.webkitAnimationName = 'lines22';
+ boo.style.webkitAnimationPlayState = 'running';
+ boo.addEventListener('webkitAnimationEnd',function(e) {
+
+  boo.style.webkitAnimationPlayState = 'paused';
+
+boo.style.webkitAnimationName = 'lines221';
+ boo.style.webkitAnimationPlayState = 'running';
+
+setTimeout(function(){
+
+$('#lines22').hide();
+$('#lines22_loop').show();
+var boos =  document.getElementById('lines22_loop');
+  boos.style.webkitAnimationPlayState = 'paused';
+boos.style.webkitAnimationName = 'lines222';
+ boos.style.webkitAnimationPlayState = 'running';
+   //secondl();
+},3000);
+ });
+ setTimeout(function(){ secondl();},7000);
+
+ }
+ function secondl()
+    {
+  
+    sssssl();
+    setInterval(function(){ repeatl();},4000);
+
+    }
+    
+    function repeatl()
+    {
+    
+    sssssl();
+
+    }
+function sssssl(){
+console.log("sese");
+$('#b').show();
+$('#b1').hide();
+var boo =  document.getElementById('b');
+boo.style.webkitAnimationName = 'lines_loop';
+ boo.style.webkitAnimationPlayState = 'running';
+ boo.addEventListener('webkitAnimationEnd',function(e) {
+
+  boo.style.webkitAnimationPlayState = 'paused';
+
+boo.style.webkitAnimationName = 'lines1_loop';
+ boo.style.webkitAnimationPlayState = 'running';
+
+setTimeout(function(){
+
+$('#b').hide();
+$('#b1').show();
+var boos =  document.getElementById('b1');
+  boos.style.webkitAnimationPlayState = 'paused';
+boos.style.webkitAnimationName = 'lines2_loop';
+ boos.style.webkitAnimationPlayState = 'running';
+    
+},3000);
+ });
+ }
+ function second()
+    {
+   
+    ssss();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    ssss();
+
+    }
+ function ssss(){
+
+  var arm =  document.getElementById('arm22');
+  var arm_loop =  document.getElementById('arm22_loop');
+    arm.style.webkitAnimationPlayState = 'paused';
+$('#arm22').hide();
+
+$('#arm22_loop').show();
+
+
+ arm_loop.style.webkitAnimationName = 'arm_loop';
+ arm_loop.style.webkitAnimationPlayState = 'running';
+
+  arm_loop.addEventListener('webkitAnimationEnd',function(e) {
+ arm_loop.style.webkitAnimationName = 'arm1_loop';
+ arm_loop.style.webkitAnimationPlayState = 'running';
+ });
+
+ }
+ </script>
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_50" class="img_ibooks" src="../images/page022.png" width="1003" height="1005" alt="image"/></div>
+<div id="lines22"  style="position: absolute; left: 590px; top: 260px;opacity:0;">
+<img id="img_51" class="img_ibooks" src="../images/Lines_22.png" width="40" height="53" alt="image"/></div>
+<div id="lines22_loop"  style="position: absolute; left: 590px; top: 260px;opacity:0;">
+<img id="img_52" class="img_ibooks" src="../images/Lines_22.png" width="40" height="53" alt="image"/></div>
+<div id="b"  style="position: absolute; left: 590px; top: 260px;display:none;opacity:0;">
+<img id="img_53" class="img_ibooks" src="../images/Lines_22.png" width="40" height="53" alt="image"/></div>
+<div id="b1"  style="position: absolute; left: 590px; top: 260px;display:none;opacity:0;">
+<img id="img_54" class="img_ibooks" src="../images/Lines_22.png" width="40" height="53" alt="image"/></div>
+<div id="drops2_22"  style="position: absolute; left: 269px; top: 619px;">
+<img id="img_55" class="img_ibooks" src="../images/Drops2_22.png" width="87" height="105" alt="image"/></div>
+<div id="head22"  style="position: absolute; top: 596px; left: 187px;">
+<img id="img_57" class="img_ibooks" src="../images/Head_22.png" width="218" height="186" alt="image"/></div>
+<div id="arm22"  style="position: absolute; top: 747px; left: 208px;">
+<img id="img_58" class="img_ibooks" src="../images/Arm_22.png" width="198" height="85" alt="image"/></div>
+<div id="arm22_loop"  style="position:absolute; top: 747px; left: 208px;display:none;">
+<img id="img_59" class="img_ibooks" src="../images/Arm_22.png" width="198" height="85" alt="image"/></div>
+</body>
+</html>

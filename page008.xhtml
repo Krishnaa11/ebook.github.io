@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+
+$(document).ready(function() {
+
+var bang1 =  document.getElementById('bang1');
+var bang2 =  document.getElementById('bang2');
+var bang3 =  document.getElementById('bang3');
+ bang1.addEventListener('webkitAnimationEnd',function(e) {
+ bang2.style.webkitAnimationName = "bang2"; 
+ bang2.style.webkitAnimationPlayState = 'running';
+ });
+ bang2.addEventListener('webkitAnimationEnd',function(e) {
+  bang2.style.webkitAnimationPlayState = 'paused';
+ bang3.style.webkitAnimationName = "bang3"; 
+ bang3.style.webkitAnimationPlayState = 'running';
+  setTimeout(function(){
+  bang1.style.webkitAnimationName = "bang1"; 
+ bang1.style.webkitAnimationPlayState = 'running';
+ bang2.style.webkitAnimationPlayState = 'paused';
+ bang3.style.webkitAnimationPlayState = 'paused';
+ bang1.addEventListener('webkitAnimationEnd',function(e) {
+ bang1.style.webkitAnimationPlayState = 'paused';
+ bang3.style.webkitAnimationPlayState = 'paused';
+ bang2.style.webkitAnimationPlayState = 'running';
+ bang2.style.webkitAnimationName = "bang2"; 
+
+ });
+ bang2.addEventListener('webkitAnimationEnd',function(e) {
+ bang2.style.webkitAnimationPlayState = 'paused';
+ bang1.style.webkitAnimationPlayState = 'paused';
+  bang3.style.webkitAnimationPlayState = 'running';
+ bang3.style.webkitAnimationName = "bang3"; 
+
+
+ });
+
+ }, 3000);
+ });
+ s();
+});
+function s(){
+var gun =  document.getElementById('thumb8');
+var water =  document.getElementById('water8');
+gun.style.webkitAnimationName = "thumb8"; 
+ gun.style.webkitAnimationPlayState = 'running';
+ gun.addEventListener('webkitAnimationEnd',function(e) {
+ water.style.webkitAnimationName = "water8"; 
+ water.style.webkitAnimationPlayState = 'running';
+ });
+ water.addEventListener('webkitAnimationEnd',function(e){
+
+  gun.style.webkitAnimationPlayState = 'paused';
+
+ water.style.webkitAnimationPlayState = 'paused';
+    setTimeout(function(){ second();},7000);
+ });
+}
+function second()
+    {
+   
+    s();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    s();
+
+    }
+</script>
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_15" class="img_ibooks" src="../images/page08.png" width="1003" height="1005" alt="image"/></div>
+<div id="bang1" style="position: absolute; top: 334px; left: 373px;opacity:0;">
+<img id="img_16" class="img_ibooks" src="../images/1_BANG.png" width="241" height="115" alt="image"/></div>
+<div id="bang2" style="position: absolute; top: 285px; left: 211px;opacity:0;">
+<img id="img_17" class="img_ibooks" src="../images/2_BANG.png" width="201" height="129" alt="image"/></div>
+<div id="bang3"  style="position: absolute; top: 174px; left: 247px;opacity:0;">
+<img id="img_18" class="img_ibooks" src="../images/3_BANG.png" width="297" height="172" alt="image"/></div>
+<div id="water8" style="position: absolute; top: 453px; left: 521px;">
+<img id="img_19" class="img_ibooks" src="../images/Water_8.png" width="33" height="32" alt="image"/></div>
+<div id="thumb8"  style="position: absolute; left:482px; top:528px;">
+<img id="img_20" class="img_ibooks" src="../images/thumb_08.png" width="33" height="35" alt="image"/></div>
+</body>
+</html>

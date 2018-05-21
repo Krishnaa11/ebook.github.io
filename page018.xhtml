@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+$(document).ready(function() {
+
+
+myfun();
+
+});
+
+function myfun(){
+	var boo =  document.getElementById('booh');
+	//var element = document.getElementById('booh');
+	boo.style.opacity = "0";
+	boo.style.filter  = 'alpha(opacity=0)';
+	boo.style.webkitAnimationPlayState = 'paused';
+	boo.style.webkitAnimationName = 'booh';
+	boo.style.webkitAnimationPlayState = 'running';
+	boo.addEventListener('webkitAnimationEnd',function(e) {
+		//var elment = document.getElementById('booh');
+		boo.style.webkitAnimationPlayState = 'paused';
+		setTimeout(function(){
+			//alert("asfsa");
+			boo.style.webkitAnimationPlayState = 'paused';
+			HideBooh();				
+		},2000);
+	});
+ //setInterval(function(){ myfun();();},3000);
+}
+function HideBooh(){
+	var boo =  document.getElementById('booh');
+	boo.style.opacity = "1";
+	boo.style.filter  = 'alpha(opacity=100)';
+	//alert("I am done");
+	boo.style.webkitAnimationPlayState = 'paused';
+	boo.style.webkitAnimationName = 'booh_sec';
+	boo.style.webkitAnimationPlayState = 'running';
+	boo.addEventListener('webkitAnimationEnd',function(e) {
+		//myfun();
+		//setTimeOut(function(){ myfun();},3000);
+	
+			setTimeout(function(){ second();},3000);			
+		
+	});
+}
+     function second()
+    {
+   
+    myfun1();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    myfun1();
+
+    }
+function myfun1(){
+$('#booh_2time').show();
+$('#booh').hide();
+
+	var boo =  document.getElementById('booh_2time');
+	//var element = document.getElementById('booh');
+	boo.style.opacity = "0";
+	boo.style.filter  = 'alpha(opacity=0)';
+	boo.style.webkitAnimationPlayState = 'paused';
+	boo.style.webkitAnimationName = 'booh';
+	boo.style.webkitAnimationPlayState = 'running';
+	boo.addEventListener('webkitAnimationEnd',function(e) {
+		//var elment = document.getElementById('booh');
+		boo.style.webkitAnimationPlayState = 'paused';
+		setTimeout(function(){
+			//alert("asfsa");
+			boo.style.webkitAnimationPlayState = 'paused';
+			HideBooh1();				
+		},2000);
+	});
+ //setInterval(function(){ myfun();();},3000);
+}
+function HideBooh1(){
+	var boo =  document.getElementById('booh_2time');
+	boo.style.opacity = "1";
+	boo.style.filter  = 'alpha(opacity=100)';
+	//alert("I am done");
+	boo.style.webkitAnimationPlayState = 'paused';
+	boo.style.webkitAnimationName = 'booh_sec';
+	boo.style.webkitAnimationPlayState = 'running';
+	boo.addEventListener('webkitAnimationEnd',function(e) {
+		//myfun();
+		//setTimeOut(function(){ myfun();},3000);
+		setTimeout(function(){
+			//myfun();				
+		},3000);
+	});
+}
+ 
+</script>
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_40" class="img_ibooks" src="../images/page018.png" width="1003" height="1005" alt="image"/></div>
+<div id="booh"  style="position: absolute; top: 27px; left: 94px;opacity:0;">
+<img id="img_41" class="img_ibooks" src="../images/booh.png" width="597" height="385" alt="image"/></div>
+<div id="booh_2time"  style="position: absolute; top: 27px; left: 94px;opacity:0;display:none;">
+<img id="img_42" class="img_ibooks" src="../images/booh.png" width="597" height="385" alt="image"/></div>
+</body>
+</html>

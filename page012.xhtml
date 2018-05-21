@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+$(document).ready(function() {
+
+s();
+thumb();
+ });
+ function s(){
+$('#book_loop').hide();
+$('#book').show();
+ var book =  document.getElementById('book');
+  var book_loop =  document.getElementById('book_loop');
+   book_loop.style.webkitAnimationPlayState = 'paused';
+  book.style.webkitAnimationName = 'book';
+ book.style.webkitAnimationPlayState = 'running';
+
+
+ book.addEventListener('webkitAnimationEnd',function(e) {
+ book.style.webkitAnimationName = 'book1';
+ book.style.webkitAnimationPlayState = 'running';
+
+book.addEventListener('webkitAnimationEnd',function(e) {
+  setTimeout(function(){ second();},3000);
+ 
+//s();
+
+ });
+});
+
+
+ }
+ 
+ function second()
+    {
+   
+    ssss();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    ssss();
+
+    }
+ function ssss(){
+  var book =  document.getElementById('book');
+  var book_loop =  document.getElementById('book_loop');
+    book.style.webkitAnimationPlayState = 'paused';
+$('#book').hide();
+
+$('#book_loop').show();
+
+
+ book_loop.style.webkitAnimationName = 'book_loop';
+ book_loop.style.webkitAnimationPlayState = 'running';
+  book_loop.addEventListener('webkitAnimationEnd',function(e) {
+ book_loop.style.webkitAnimationName = 'book1_loop';
+ book_loop.style.webkitAnimationPlayState = 'running';
+ });
+ }
+ function thumb(){
+var gun =  document.getElementById('thumb12');
+var water =  document.getElementById('water12');
+gun.style.webkitAnimationName = "thumb12"; 
+ gun.style.webkitAnimationPlayState = 'running';
+ gun.addEventListener('webkitAnimationEnd',function(e) {
+ water.style.webkitAnimationName = "water12"; 
+ water.style.webkitAnimationPlayState = 'running';
+ });
+ water.addEventListener('webkitAnimationEnd',function(e){
+
+  gun.style.webkitAnimationPlayState = 'paused';
+
+ water.style.webkitAnimationPlayState = 'paused';
+    setTimeout(function(){ secondthumb();},7000);
+ });
+}
+function secondthumb()
+    {
+   
+    thumb();
+    setInterval(function(){ repeatthumb();},7000);
+
+    }
+    
+    function repeatthumb()
+    {
+    
+    thumb();
+
+    }
+ </script>
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_26" class="img_ibooks" src="../images/page012.png" width="1003" height="1005" alt="image"/></div>
+<div id="water12" style="position: absolute; top: 688px; left: 33px;">
+<img id="img_27" class="img_ibooks" src="../images/Water10.png" width="109" height="80" alt="image"/></div>
+<div id="book"  style="position: absolute; left: 637px; top: 436px;">
+<img id="img_28" class="img_ibooks" src="../images/Book.png" width="324" height="270" alt="image"/></div>
+<div id="book_loop"  style="position: absolute; left: 637px; top: 436px;display:none;">
+<img id="img_29" class="img_ibooks" src="../images/Book.png" width="324" height="270" alt="image"/></div>
+
+<div id="thumb12"  style="position: absolute; left:158px; top:692px;">
+<img id="img_30" class="img_ibooks" src="../images/thumb12.png" width="38" height="29" alt="image"/></div>
+</body>
+</html>

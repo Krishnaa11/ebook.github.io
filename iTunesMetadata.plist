@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artistName</key>
+	<string>Jørgen Stamp</string>
+	<key>book-info</key>
+	<dict>
+		<key>cover-image-hash</key>
+		<string>51EA131DFD5D91F69D1800CBCD9110CC</string>
+		<key>cover-image-path</key>
+		<string>OPS/images/9788711373965.jpg</string>
+		<key>mime-type</key>
+		<string>application/epub+zip</string>
+		<key>package-file-hash</key>
+		<string>9D76145FC1A71882F19B2B22D82F4B09</string>
+		<key>publisher-unique-id</key>
+		<string>9788711373965</string>
+		<key>unique-id</key>
+		<integer>-6319055142232488082</integer>
+		<key>update-level</key>
+		<integer>2</integer>
+	</dict>
+	<key>itemName</key>
+	<string>Kalle leger cowboy</string>
+	<key>playlistName</key>
+	<string>Kalle leger cowboy</string>
+	<key>releaseDate</key>
+	<string>2013-10-13</string>
+</dict>
+</plist>

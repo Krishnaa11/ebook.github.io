@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="da">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../styles/general.css"/>
+<meta name="viewport" content="width=1003, height=1005"></meta>
+<title>Kalle leger cowboy</title>
+
+<script src="../script/jquery.js" type="text/javascript"></script>
+<script  type="text/javascript">
+$(document).ready(function() {
+
+s();
+ });
+ function s(){
+
+$('#horse_loop').hide();
+$('#horse').show();
+ var horse =  document.getElementById('horse');
+    var horse_loop =  document.getElementById('horse_loop');
+  horse_loop.style.webkitAnimationPlayState = 'paused';
+  horse.style.webkitAnimationName = 'horse';
+ horse.style.webkitAnimationPlayState = 'running';
+
+
+ horse.addEventListener('webkitAnimationEnd',function(e) {
+ horse.style.webkitAnimationName = 'horse1';
+ horse.style.webkitAnimationPlayState = 'running';
+
+horse.addEventListener('webkitAnimationEnd',function(e) {
+
+  setTimeout(function(){ second();},3000);
+
+ });
+});
+
+
+ }
+ 
+   function second()
+    {
+   
+    ssss();
+    setInterval(function(){ repeat();},7000);
+
+    }
+    
+    function repeat()
+    {
+    
+    ssss();
+
+    }
+	
+ function ssss(){
+
+  var horse =  document.getElementById('horse');
+  var horse_loop =  document.getElementById('horse_loop');
+    horse.style.webkitAnimationPlayState = 'paused';
+$('#horse').hide();
+
+$('#horse_loop').show();
+
+
+ horse_loop.style.webkitAnimationName = 'horse_loop';
+ horse_loop.style.webkitAnimationPlayState = 'running';
+  horse_loop.addEventListener('webkitAnimationEnd',function(e) {
+ horse_loop.style.webkitAnimationName = 'horse1_loop';
+ horse_loop.style.webkitAnimationPlayState = 'running';
+ });
+
+ }
+ </script>
+</head>
+<body class="background_white">
+	<div class="background" epub:type="bodymatter chapter">
+<img id="img_36" class="img_ibooks" src="../images/page016.png" width="1003" height="1005" alt="image"/></div>
+<div id="horse" style="position: absolute; top: 475px; left: 438px;width:367px;height:332px;">
+<img id="img_37" class="img_ibooks" src="../images/Horse.png" width="367" height="332" alt="image"/></div>
+<div id="horse_loop" style="position: absolute; top: 475px; left: 438px;width:367px;height:332px;display:none;">
+<img id="img_38" class="img_ibooks" src="../images/Horse.png" width="367" height="332" alt="image"/></div>
+</body>
+</html>
